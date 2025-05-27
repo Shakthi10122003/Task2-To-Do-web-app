@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Master Your Day</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="overlay" id="overlay"></div>
+
+  <div class="container">
+    <h1>🚀 Master Your Day</h1>
+    <p>Manage your goals with style and precision</p>
+    <button id="addBtn" class="add-task-button">➕ Create Task</button>
+
+    <div class="task-columns">
+      <div class="column" id="todoColumn">
+        📝 <strong>To-Do</strong>
+        <div class="task-list" id="todoList"></div>
+      </div>
+      <div class="column" id="overdueColumn">
+        🧨 <strong>Overdue</strong>
+        <div class="task-list" id="overdueList"></div>
+      </div>
+      <div class="column" id="completedColumn">
+        ✅ <strong>Completed</strong>
+        <div class="task-list" id="completedList"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="taskModal">
+    <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
+      <h2>Add New Task</h2>
+      <input type="text" id="taskInput" placeholder="Task Title" />
+      <select id="importance">
+        <option disabled selected>Select Importance</option>
+        <option value="High">High</option>
+        <option value="Medium">Medium</option>
+        <option value="Low">Low</option>
+      </select>
+      <input type="date" id="dueDate" />
+      <input type="time" id="dueTime" />
+      <select id="reminder">
+        <option disabled selected>Reminder Frequency</option>
+        <option value="None">None</option>
+        <option value="Daily">Daily</option>
+        <option value="Weekly">Weekly</option>
+      </select>
+      <button id="saveTask">Add Task</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
